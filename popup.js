@@ -32,7 +32,10 @@ function change() {
     };
   
     resultText = $(a.value.replace(/\$/g, "\n")).trim();
-    alert('글을 등록하기 전 꼭 아무데나 띄어쓰기를 한번 해주세요.')
+    window.navigator.clipboard.writeText(resultText).then(() => {
+      alert("클립보드에 복사되었습니다.");
+    });
+    //alert('글을 등록하기 전 꼭 아무데나 띄어쓰기를 한번 해주세요.')
   }
   
   function assa() {
@@ -52,7 +55,6 @@ function change() {
     var btn01 = document.getElementById('btn');
     btn01.addEventListener('click', function () {
         change();
-        assa();
     });
   });
   
