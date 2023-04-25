@@ -1,11 +1,18 @@
 {
     "name":"Taker",
     "description":"엔트리 줄바꿈 확장 프로그램 (Original By G2)",
-    "version":"0.1",
-    "permissions":["activeTab"],
+    "version":"1.0",
+    "permissions":["activeTab","tabs","https://playentry.org/community/entrystory/*"],
     "manifest_version":2,
     "browser_action":{
-        "default_title":"test",
-        "default_popup":"popup.html"
-    }
+        "default_popup":"popup.html",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+        "matches": ["https://playentry.org/community/entrystory/*"],
+        "js": ["content.js"]
+        }
+    ]
+    
 }
