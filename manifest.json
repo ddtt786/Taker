@@ -7,13 +7,6 @@
     "action":{
         "default_popup":"popup/popup.html",
         "default_icon": "icon.png"
-    },
-    "content_scripts": [
-        {
-        "matches": ["https://playentry.org/community/entrystory/*"],
-        "js": ["script/script.js"],
-        "css": ["script/script.css"]
-        }
-    ]
-    
+    }
+
 }
