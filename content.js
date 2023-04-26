@@ -40,7 +40,6 @@ function change() {
     };
   
     resultText = $(a.value.replace(/\$/g, "\n")).trim();
-    //alert('글을 등록하기 전 꼭 아무데나 띄어쓰기를 한번 해주세요.')
   }
 
 function assa() {
