@@ -35,18 +35,6 @@ function change() {
   window.navigator.clipboard.writeText(resultText).then(() => {
     alert("클립보드에 복사되었습니다.");
   });
-  //alert('글을 등록하기 전 꼭 아무데나 띄어쓰기를 한번 해주세요.')
-}
-
-function assa() {
-  chrome.tabs.executeScript(
-    null,
-    { code: "document.querySelector('#Write').value='변환 중'"}
-  );
-  chrome.tabs.executeScript(
-    null,
-    { code: `document.querySelector('#Write').value='${resultText}'` }
-  );
 }
 
 let resultText = '';
