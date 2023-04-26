@@ -1,4 +1,4 @@
-window.onload=click()
+window.addEventListener('DOMContentLoaded',click());
 
 function click() {
     const button=document.querySelectorAll(".css-1adjw8a")[0]
