@@ -1,12 +1,31 @@
 {
-    "name":"Taker",
-    "description":"엔트리 줄바꿈 확장 프로그램 (Original By G2)",
-    "version":"1.1",
-    "permissions":["activeTab"],
-    "manifest_version":3,
-    "action":{
-        "default_popup":"popup/popup.html",
-        "default_icon": "icon.png"
+  "manifest_version": 3,
+  "name": "Baker",
+  "description": "Faker를 포크한 버전입니다.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon/16.png",
+    "32": "icon/32.png",
+    "48": "icon/48.png",
+    "128": "icon/128.png"
+  },
+  "permissions": ["webNavigation", "scripting", "tabs"],
+  "host_permissions": ["https://playentry.org/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://playentry.org/*"],
+      "all_frames": true,
+      "css": ["baker.css"],
+      "js": ["baker.js"]
     }
-
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["baker.svg"],
+      "matches": ["https://playentry.org/*"]
+    }
+  ]
 }
